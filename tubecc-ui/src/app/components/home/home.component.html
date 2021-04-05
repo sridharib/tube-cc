@@ -1,0 +1,33 @@
+<div fxLayout="row wrap" fxLayoutGap="2%">
+    <div fxFlex.gt-sm="65" fxFlex.lt-md="100" fxLayout="column">
+        <mat-card>
+            <mat-form-field style="width: 100%;">
+                <mat-label>Enter Youtube or Vimeo URL here</mat-label>
+                <input matInput type="text" [(ngModel)]="vidSrc">
+                <button mat-button *ngIf="vidSrc" matSuffix mat-icon-button aria-label="Done" (click)="updatePlyrURL()">
+                    <mat-icon>done</mat-icon>
+                </button>
+                <button mat-button *ngIf="vidSrc" matSuffix mat-icon-button aria-label="Clear" (click)="vidSrc=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <div id="plyrID" data-plyr-provider="youtube" data-plyr-embed-id="q3ZubzERSmY"></div>
+        </mat-card>
+    </div>
+
+    <div fxFlex.gt-sm="33" fxFlex.lt-md="100" fxLayout="column">
+        <mat-card>
+            <mat-form-field style="width: 100%;">
+                <mat-label>Search for subtitle</mat-label>
+                <input matInput type="text" [(ngModel)]="searchTitle">
+                <button mat-button *ngIf="searchTitle" matSuffix mat-icon-button aria-label="Done" (click)="searchSubtitle()">
+                    <mat-icon>done</mat-icon>
+                </button>
+                <button mat-button *ngIf="searchTitle" matSuffix mat-icon-button aria-label="Clear" (click)="searchTitle=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </mat-card>
+    </div>
+</div>

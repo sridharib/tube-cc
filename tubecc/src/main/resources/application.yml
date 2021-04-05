@@ -1,0 +1,6 @@
+
+api:
+  path: /api/v1
+
+opensubtitle:
+  search-url: https://rest.opensubtitles.org/search
