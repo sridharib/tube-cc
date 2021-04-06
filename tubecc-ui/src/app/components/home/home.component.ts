@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {SubtitleService} from '../../services/subtitle.service';
+
+import { SubtitleService } from 'src/app/services/subtitle.service';
+import { SearchResult } from 'src/app/model/search-result';
+
 import * as Plyr from 'plyr';
 
 @Component({
@@ -12,8 +15,10 @@ export class HomeComponent implements OnInit {
   private player: Plyr = new Plyr('#plyrID');
   public vidSrc: string = "";
   public searchTitle: string = "";
+  public searchResults: Array<SearchResult> = [];
+  public displayedColumns: string[] = ['subFileName', 'languageName'];
 
-  constructor(private subtitleService : SubtitleService) {}
+  constructor(private subtitleService: SubtitleService) { }
 
   ngOnInit(): void {
     this.player = new Plyr('#plyrID', { captions: { active: true } });
@@ -34,8 +39,8 @@ export class HomeComponent implements OnInit {
   }
 
   public searchSubtitle() {
-    this.subtitleService.searchSubtitle(this.searchTitle).subscribe((data: any) => {
-      console.log(data);
+    this.subtitleService.searchSubtitle(this.searchTitle).subscribe((data: Array<SearchResult>) => {
+      this.searchResults = data;
     });
   }
 

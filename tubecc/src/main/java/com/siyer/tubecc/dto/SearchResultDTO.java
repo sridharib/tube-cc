@@ -1,21 +1,21 @@
 package com.siyer.tubecc.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import lombok.Data;
 
 @Data
 public class SearchResultDTO {
 
-    @JsonProperty("SubFileName")
+    @JsonAlias({"SubFileName"})
     private String subFileName;
 
-    @JsonProperty("SubDownloadLink")
+    @JsonAlias({"SubDownloadLink"})
     private String subDownloadLink;
 
-    @JsonProperty("SubFormat")
+    @JsonAlias({"SubFormat"})
     private String subFormat;
 
-    @JsonProperty("LanguageName")
+    @JsonAlias({"LanguageName"})
     private String languageName;
 
 }
