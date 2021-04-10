@@ -12,7 +12,11 @@
                 </button>
             </mat-form-field>
 
-            <div id="plyrID" data-plyr-provider="youtube" data-plyr-embed-id="q3ZubzERSmY"></div>
+            <div class="media-wrapper">
+                <video id="vid1" class="video-js vjs-default-skin" controls autoplay width="640" height="264"
+                    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'>
+                </video>
+            </div>
         </mat-card>
     </div>
 
@@ -44,7 +48,7 @@
                     </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="loadSubtitle(row)"></tr>
                 </table>
             </div>
 

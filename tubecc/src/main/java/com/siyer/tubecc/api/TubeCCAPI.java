@@ -2,17 +2,15 @@ package com.siyer.tubecc.api;
 
 import com.siyer.tubecc.dto.SearchResultDTO;
 import com.siyer.tubecc.service.TubeCCService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 @RestController
 public class TubeCCAPI {
 
     private TubeCCService service;
+
     public TubeCCAPI(TubeCCService service) {
         this.service = service;
     }
@@ -22,9 +20,9 @@ public class TubeCCAPI {
         return service.search(query);
     }
 
-    @GetMapping("${api.path}/load")
-    public Mono<String> load(@RequestBody SearchResultDTO searchResultDTO) {
-        return Mono.just("");
+    @PostMapping("${api.path}/loadSubtitle")
+    public Flux<DataBuffer> loadSubtitle(@RequestBody SearchResultDTO searchResultDTO) {
+        return service.load(searchResultDTO);
     }
 
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
@@ -19,5 +19,9 @@ export class SubtitleService {
   public searchSubtitle(title: string) {
     return this.http.get<Array<SearchResult>>(this.url + '/search?query=' + title);
   }
-  
+
+  public loadSubtitle(row: SearchResult) {
+    return this.http.post(this.url + '/loadSubtitle', row, { responseType: 'text' });
+  }
+
 }
