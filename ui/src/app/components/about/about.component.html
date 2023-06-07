@@ -1,0 +1,61 @@
+<div>
+    <div class="flex justify-center">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="https://picsum.photos/200/100">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">The Tube CC</div>
+                <div class="text-gray-700 text-base">
+                    <div>
+                        This application is developed in Angular & Spring Boot and is hosted on Heroku cloud.
+                        The subtitle service is provided by
+                        <a href="http://www.opensubtitles.org/" target="_blank">http://www.opensubtitles.org/</a>.
+                    </div>
+                    <div>
+                        Developed by Sridhar Iyer.
+                    </div>
+                    <div>
+                        LinkedIn: <a href="https://www.linkedin.com/in/sridiyer" target="_blank">sridiyer</a>
+                    </div>
+                    <div>
+                        Github: <a href="https://github.com/sridharib" target="_blank">sridharib</a>
+                    </div>
+                    <div>
+                        Twitter: <a href="https://twitter.com/sridiyer" target="_blank">sridiyer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#subtitles</span>
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#youtube</span>
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#vimeo</span>
+            </div>
+        </div>
+    </div>
+    <div id="disqus_thread"></div>
+</div>
+
+
+<!-- Disqus -->
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function () {
+        this.page.url = 'https://tubecc.herokuapp.com/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'tube-cc'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    function loadComments() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//tubecc.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+</script>
