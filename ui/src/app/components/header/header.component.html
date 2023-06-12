@@ -1,0 +1,38 @@
+<header>
+  <nav>
+    <div class="flex flex-row justify-around px-2">
+      <div class="w-full">
+        <a routerLink="/home" routerLinkActive="active" class="no-underline">
+          <img class="h-12 py-1" src="assets/images/logo.png" alt="Tube CC">
+        </a>
+      </div>
+      <div class="self-center text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline">
+        <div class="float-right">
+          <span class="hidden md:block">
+            <a routerLink="/home" routerLinkActive="active" class="px-2">
+              <span>
+                <mat-icon class="align-text-bottom">home</mat-icon>
+              </span>
+              <span>Home</span>
+            </a>
+            <a routerLink="/about" routerLinkActive="active">
+              <span>
+                <mat-icon class="align-text-bottom">info</mat-icon>
+              </span>
+              <span>About</span>
+            </a>
+          </span>
+
+          <span class="block md:hidden">
+            <a routerLink="/home" routerLinkActive="active">
+              <mat-icon>home</mat-icon>
+            </a>
+            <a routerLink="/about" routerLinkActive="active">
+              <mat-icon>info</mat-icon>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
