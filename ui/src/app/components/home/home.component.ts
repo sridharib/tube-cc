@@ -11,7 +11,7 @@ declare var MediaElementPlayer: any;
 })
 export class HomeComponent implements OnInit {
 
-  private _vidSrc: string = "https://www.youtube.com/watch?v=a_-BrHqQwXI";//"https://www.youtube.com/watch?v=q3ZubzERSmY";
+  private _vidSrc: string = "https://www.youtube.com/watch?v=q3ZubzERSmY";
   private _trackSrc: string = "";
   private _searchTitle: string = "";
   private _searchResults: SearchResult[] = [];
