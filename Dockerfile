@@ -1,7 +1,7 @@
 FROM node:20-alpine3.17 AS uibuild
 COPY ui/ /app/ui/
 WORKDIR /app/ui
-RUN npm install -g @angular/cli@16.0.2
+RUN npm install
 RUN npm run build --production
 
 FROM maven:3.9-eclipse-temurin-17-alpine AS bebuild
